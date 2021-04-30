@@ -54,7 +54,7 @@ ROOT_URLCONF = 'voscheck.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,8 +75,13 @@ WSGI_APPLICATION = 'voscheck.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'voscheck',
+        'USER':'root',
+        'PASSWORD':'Lei.110120',
+        'HOST':'127.0.0.1',
+        'PORT':3306,
+
     }
 }
 
