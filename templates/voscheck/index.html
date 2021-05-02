@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>layout 管理系统大布局 - Layui</title>
+  <title>小麦黑名单质检平台</title>
   {% load static %}
   <link rel="stylesheet" href="{% static 'layui/css/layui.css' %}">
 </head>
 <body>
 <div class="layui-layout layui-layout-admin">
   <div class="layui-header">
-    <div class="layui-logo">layout demo</div>
+    <div class="layui-logo">Hi Voice</div>
     <!-- 头部区域（可配合layui 已有的水平导航） -->
     <ul class="layui-nav layui-layout-left">
       <li class="layui-nav-item"><a href="">nav 1</a></li>
@@ -29,14 +29,14 @@
       <li class="layui-nav-item">
         <a href="javascript:;">
           <img src="//tva1.sinaimg.cn/crop.0.0.118.118.180/5db11ff4gw1e77d3nqrv8j203b03cweg.jpg" class="layui-nav-img">
-          tester
+          Rennes
         </a>
         <dl class="layui-nav-child">
-          <dd><a href="">set 1</a></dd>
-          <dd><a href="">set 2</a></dd>
+          <dd><a href="">安全退出</a></dd>
+          <dd><a href="">修改密码</a></dd>
         </dl>
       </li>
-      <li class="layui-nav-item"><a href="">Sign out</a></li>
+      {% comment %} <li class="layui-nav-item"><a href="">Sign out</a></li> {% endcomment %}
     </ul>
   </div>
   
@@ -45,24 +45,35 @@
       <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
       <ul class="layui-nav layui-nav-tree"  lay-filter="test">
         <li class="layui-nav-item layui-nav-itemed">
-          <a class="" href="javascript:;">menu group 1</a>
+          <a class="" href="javascript:;">用户信息</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">menu item 1-1</a></dd>
-            <dd><a href="javascript:;">menu item 1-2</a></dd>
-            <dd><a href="javascript:;">menu item 1-3</a></dd>
-            <dd><a href="">the links</a></dd>
+            <dd><a href="javascript:;">用户详情</a></dd>
+            <dd><a href="javascript:;">接入IP</a></dd>
+            <dd><a href="javascript:;">对接文档</a></dd>
           </dl>
         </li>
         <li class="layui-nav-item">
-          <a href="javascript:;">menu group 2</a>
+          <a href="javascript:;">黑白名单</a>
           <dl class="layui-nav-child">
-            <dd><a href="javascript:;">list 2-1</a></dd>
-            <dd><a href="javascript:;">list 2-2</a></dd>
-            <dd><a href="">超链接</a></dd>
+            <dd><a href="javascript:;">命中话单</a></dd>
+            <dd><a href="javascript:;">名单验证</a></dd>
+            <dd><a href="javascript:;">自用名单</a></dd>
           </dl>
         </li>
-        <li class="layui-nav-item"><a href="javascript:;">menu item 123</a></li>
-        <li class="layui-nav-item"><a href="">the links</a></li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">语音质检</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">质检记录</a></dd>
+            <dd><a href="javascript:;">告警记录</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">计费规则</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">充值记录</a></dd>
+            <dd><a href="javascript:;">消费记录</a></dd>
+          </dl>
+        </li>
       </ul>
     </div>
   </div>
