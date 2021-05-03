@@ -1,0 +1,10 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+{% comment %} <h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django administration') }}</a></h1> {% endcomment %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">小麦黑名单质检</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

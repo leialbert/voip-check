@@ -31,6 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'users.apps.UsersConfig',
+    'blacklists.apps.BlacklistsConfig',
+    'voicecheck.apps.VoicecheckConfig',
+    'bills.apps.BillsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
