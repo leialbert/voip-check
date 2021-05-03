@@ -80,12 +80,16 @@
   
   <div class="layui-body">
     <!-- 内容主体区域 -->
-    <div style="padding: 15px;">内容主体区域</div>
+    <div style="padding: 15px;">
+    {% block right-content %}
+    内容主体区域
+    {% endblock %}
+    </div>
   </div>
   
   <div class="layui-footer">
     <!-- 底部固定区域 -->
-    底部固定区域
+    &copy 小麦放歌 2021-2025
   </div>
 </div>
  

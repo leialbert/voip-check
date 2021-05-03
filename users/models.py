@@ -19,3 +19,7 @@ class User(models.Model):
     password = models.CharField("密码", max_length=256)
     mobilephone = models.CharField("手机号", max_length=11)
     update_time = models.DateTimeField(auto_now_add=True)
+class Whiteip(models.Model):
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    whiteip = models.CharField("可信IP", max_length=128,unique=True)
+    update_time = models.DateTimeField(auto_now_add=True)

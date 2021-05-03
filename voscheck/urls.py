@@ -22,7 +22,7 @@ urlpatterns = [
     path('blacklists/', include('blacklists.urls')),
     path('voicecheck/', include('voicecheck.urls')),
     path('bills/', include('bills.urls')),
-    # path('', views.index, name='index'),
-    # path('login/', views.login, name='login'),
+    path('', views.index, name='index'),
+    path('login/', views.login, name='login'),
     path('admin/', admin.site.urls),
 ]
