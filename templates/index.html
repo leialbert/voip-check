@@ -1,3 +1,30 @@
-<html>
-    
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+
+    <title>小麦黑名单质检平台</title>
+</head>
+<body>
+    <div class="container">
+        <!-- 导航栏 -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'img/shield-lock.svg' %}" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                小麦黑名单质检平台
+              </a>
+          </div>
+        </nav> 
+        <!-- 导航栏 -->
+      </div>
+
+
+
+
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
 </html>
