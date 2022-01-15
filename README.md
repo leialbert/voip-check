@@ -1,5 +1,11 @@
 # voip-check
 语音质检｜黑名单系统
 
-![模型设计](doc/models.drawio.png)
+## 路由设计
+
+![路由设计](doc/urls.drawio.png)
+
+## 模型设计
+
+
 
