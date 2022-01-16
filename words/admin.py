@@ -1,3 +1,12 @@
+from atexit import register
 from django.contrib import admin
 
-# Register your models here.
+from words.models import Word 
+
+@admin.register(Word)
+class WordAdmin(admin.ModelAdmin):
+    list_display = ('get_huashu',)
+
+    @admin.display(description='话术')
+    def get_huashu(self, obj):
+        return obj.huashu.zhanghao
