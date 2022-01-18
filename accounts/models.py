@@ -13,6 +13,8 @@ class Account(models.Model):
     credit_amount = models.FloatField('透支额度') 
     today_cost = models.FloatField('今日消费')
     kh_type = models.CharField('账户类型',max_length=20, choices=KH_CHOICES)
+    created_at = models.DateTimeField('上传时间',auto_now_add=True)
+    updated_at = models.DateTimeField('更新时间',auto_now=True)
     class Meta:
         verbose_name_plural = '账户信息'
 
