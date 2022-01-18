@@ -4,13 +4,13 @@ from django.contrib import admin
 from words.models import Word,Gateway
 
 class GatewayInline(admin.StackedInline):
-    model = Gateway
-    extra = 0
+    model = Gateway.huashu.through
+    # extra = 0
 
 @admin.register(Word)
 class WordAdmin(admin.ModelAdmin):
     list_display = ('get_zhanghao','get_zhanghu','short_content','attachment','is_approved','created_at','updated_at')
-    # inlines = [GatewayInline,]
+    inlines = [GatewayInline,]
 
     @admin.display(description='账号')
     def get_zhanghao(self, obj):
