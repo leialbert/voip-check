@@ -35,5 +35,18 @@ class Gateway(models.Model):
         verbose_name_plural = '网关管理'
     def __str__(self) -> str:
         return self.gateway_name
+
+class Prefix(models.Model):
+    related_gateway = models.ForeignKey(Gateway,on_delete=CASCADE,verbose_name='关联网关')
+    callee_number = models.CharField('主叫号码',max_length=30,null=True,blank=True)
+    prefix_name = models.CharField('被叫前缀',max_length=10,null=True,blank=True)
+    
+
+    class Meta:
+        verbose_name_plural = '前缀管理'
+    def __str__(self) -> str:
+        return self.prefix_name
+
+    
         
     
