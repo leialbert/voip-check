@@ -30,7 +30,7 @@ class Gateway(models.Model):
     user_name = models.ForeignKey(Account,on_delete=CASCADE,verbose_name='关联用户')
     gateway_name = models.CharField('网关名称',max_length=30,unique=True)
     gateway_type = models.CharField('网关类型',max_length=40,choices=GATEWAY_CHOICES)
-    huashu = models.ManyToManyField(Word)
+    huashu = models.ManyToManyField(Word,verbose_name='话术')
     class Meta:
         verbose_name_plural = '网关管理'
     
