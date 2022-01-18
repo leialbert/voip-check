@@ -3,7 +3,7 @@ from django.contrib import admin
 
 from words.models import Word,Gateway
 
-class GatewayInline(admin.StackedInline):
+class GatewayInline(admin.TabularInline):
     model = Gateway.huashu.through
     # extra = 0
 

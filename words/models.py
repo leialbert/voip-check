@@ -33,4 +33,7 @@ class Gateway(models.Model):
     huashu = models.ManyToManyField(Word,verbose_name='话术')
     class Meta:
         verbose_name_plural = '网关管理'
+    def __str__(self) -> str:
+        return self.gateway_name
+        
     
