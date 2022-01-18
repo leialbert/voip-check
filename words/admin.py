@@ -22,4 +22,10 @@ class WordAdmin(admin.ModelAdmin):
 
 @admin.register(Gateway)
 class GatewayAdmin(admin.ModelAdmin):
-    list_display = ('gateway_name','gateway_type')
+    list_display = ('get_zhanghao','get_zhanghu','gateway_name','gateway_type')
+    @admin.display(description='账号')
+    def get_zhanghao(self, obj):
+        return obj.user_name.zhanghao
+    @admin.display(description='账户')
+    def get_zhanghu(self, obj):
+        return obj.user_name.zhanghu
