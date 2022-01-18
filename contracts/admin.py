@@ -5,6 +5,7 @@ from contracts.models import Contract
 @admin.register(Contract)
 class ContractAdmin(admin.ModelAdmin):
     list_display = ('get_zhanghao','get_zhanghu','company_title','company_license','company_address','is_license_ok','is_contract_ok','created_at','updated_at')
+    list_editable = ('is_license_ok','is_contract_ok')
 
     @admin.display(description='账号')
     def get_zhanghao(self, obj:Contract):
