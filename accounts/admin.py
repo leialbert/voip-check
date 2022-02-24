@@ -14,5 +14,7 @@ class WordInline(admin.StackedInline):
 
 @admin.register(Account)
 class AccountAdmin(admin.ModelAdmin):
-    list_display = ('zhanghao','zhanghu','balance','credit_amount','today_cost','kh_type')
+    # list_display = ('zhanghao','zhanghu','balance','credit_amount','today_cost','kh_type')
+    list_display = ('zhanghao','zhanghu','kh_type')
+
     inlines = [ContractInline,WordInline]
